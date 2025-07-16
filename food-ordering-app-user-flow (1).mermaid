@@ -1,0 +1,19 @@
+graph TD
+    A["User Accesses App"] -->|Opens app| B["Login/About Page"]
+    B -->|"Decision: Has account?"| C{"Google Authentication"}
+    C -->|"Yes/No"| D["Personalized Home Page"]
+    D -->|"Browse categories"| E["View Food Categories"]
+    D -->|"View recommendations"| F["Recommended/Discounted Items"]
+    E --> G["Select Food Item"]
+    F --> G
+    G -->|"View details"| H["Item Details Page"]
+    H -->|"Click ADD #43;"| I["Add to Cart"]
+    I -->|"Show confirmation"| J["1 item added message"]
+    J -->|"Optional"| K["Apply Discount Code"]
+    K -->|"e.g., HUNGRY40"| L["10#37; OFF applied"]
+    J --> M["Navigate to Cart"]
+    L --> M
+    M -->|"Review items"| N["Checkout Process"]
+    N -->|"Confirm payment"| O["Complete Order"]
+    O --> P["Order Confirmation Screen"]
+    P --> Q["Track Order Status"]
